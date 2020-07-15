@@ -65,11 +65,11 @@ h3{
   width: 40%;
   z-index: 2;
 }
-.bathroom{
+.bureau{
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  bottom: -10%;
+  left: 14%;
+  width: 50%;
   z-index: 2;
 }
 .shoes{
