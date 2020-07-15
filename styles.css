@@ -4,7 +4,7 @@
 }
 
 :root{
-  --main-bg-color: #ffffffa8;
+  --main-bg-color: #e8e9e941;
   --main-txt-color: #1a1a1a;
 }
 
@@ -142,16 +142,13 @@ h3{
   margin-top: 10%;
 }
 .conf-colours .grey{
- background-color: #E2E0E0;
- opacity: 35%;
+ background-color: #EFECEC;
 }
 .conf-colours .yellow{
- background-color: #DED4C3;
- opacity: 35%;
+ background-color: #EEE8E2;
 }
 .conf-colours .blue{
- background-color: #BBC7CE;
- opacity: 35%;
+ background-color: #E1E4E6;
 }
 
 .conf-perspective{
