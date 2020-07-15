@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root{
+  --main-bg-color: #E2E0E0;
+  --main-txt-color: #1a1a1a;
+}
+
+body{
+  min-width: 100vp;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Lucida Std', Arial, Helvetica, sans-serif;
+}
+
+h2{
+  font-size: 26px;
+  font-weight: 400;
+}
+
+h3{
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* --------FLOOR------- */
+.floor{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100vh;
+}
+
+.plant{
+  position: absolute;
+  top: 0;
+  left: 60%;
+  width: 40%;
+  z-index: 2;
+}
+.table{
+  position: absolute;
+  bottom: 0;
+  left: 60%;
+  width: 40%;
+  z-index: 2;
+}
+.bathroom{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
+.shoes{
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+  width: 40%;
+  z-index: 2;
+}
+.floor .white-bg{
+  background-color: #E2E0E0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.floor .yellow-bg{
+  background-color: #DED4C3; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+}
+.floor .blue-bg{
+  background-color: #BBC7CE;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/* -------CONFIGURATOR-------- */
+
+.configurator{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 7% 4%;
+  width: 30%;
+  height: 100vh;
+}
+
+.conf-patterns{
+  margin-top: 15%;
+}
+
+.conf-colours{
+  margin-top: 15%;
+}
+.conf-colours .grey{
+ background-color: #E2E0E0;
+}
+.conf-colours .yellow{
+ background-color: #DED4C3;
+}
+.conf-colours .blue{
+ background-color: #BBC7CE;
+}
+
+.conf-perspective{
+  margin-top: 15%;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  margin-left: -11%;
+  margin-top: 4%;
+}
+
+li{
+  display: inline-block;
+  margin: 2%;
+  flex-shrink: 50%;
+}
+
+.tn{
+  width: 5em;
+  height: 5em;
+  box-shadow: 1px 3px 6px #b1b3b1b7;
+}
