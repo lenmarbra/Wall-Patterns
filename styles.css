@@ -4,7 +4,7 @@
 }
 
 :root{
-  --main-bg-color: #E2E0E0;
+  --main-bg-color: #ffffffa8;
   --main-txt-color: #1a1a1a;
 }
 
@@ -14,6 +14,7 @@ body{
   position: relative;
   overflow: hidden;
   font-family: 'Lucida Std', Arial, Helvetica, sans-serif;
+  background-color: var(--main-bg-color);
 }
 
 h2{
@@ -33,6 +34,9 @@ h3{
   left: 0;
   width: 60%;
   height: 100vh;
+  background-image: url(images/bgfilter.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .plant{
@@ -63,13 +67,14 @@ h3{
   width: 40%;
   z-index: 2;
 }
-.floor .white-bg{
+.floor .grey-bg{
   background-color: #E2E0E0;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
+  opacity: 35%;
 }
 .floor .yellow-bg{
   background-color: #DED4C3; 
@@ -78,7 +83,7 @@ h3{
   left: 0;
   width: 100%;
   height: 100vh;
-
+  opacity: 35%;
 }
 .floor .blue-bg{
   background-color: #BBC7CE;
@@ -87,6 +92,16 @@ h3{
   left: 0;
   width: 100%;
   height: 100vh;
+  opacity: 35%;
+}
+#patterns{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  opacity: 80%;
 }
 
 /* -------CONFIGURATOR-------- */
@@ -109,12 +124,15 @@ h3{
 }
 .conf-colours .grey{
  background-color: #E2E0E0;
+ opacity: 35%;
 }
 .conf-colours .yellow{
  background-color: #DED4C3;
+ opacity: 35%;
 }
 .conf-colours .blue{
  background-color: #BBC7CE;
+ opacity: 35%;
 }
 
 .conf-perspective{
@@ -137,5 +155,5 @@ li{
 .tn{
   width: 5em;
   height: 5em;
-  box-shadow: 1px 3px 6px #b1b3b1b7;
+  box-shadow: 1px 3px 6px #8e8f8eea;
 }
