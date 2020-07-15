@@ -4,19 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Floor Patterns Configurator</title>
+  <title>Wall Patterns Configurator</title>
 </head>
 <body>
   <!-- FLOOR -->
   <section class="floor">
-    <div id="bg-filter">
-    </div>
+    <div id="bg-filter"></div>
 
     <!-- PERSPECTIVE -->
     <article id="Perspective">
-      <article class="env-table">
+      <!-- <article class="env-table">
         <img class="plant" src="images/env/plant.png" alt="">
         <img class="table" src="images/env/table.png" alt="">
+      </article> -->
+      <article>
+        <img class="lamp" src="images/lamp.svg" alt="">
       </article>
       <!-- <article class="env-bathroom">
         <img class="bathroom" src="images/env/bathroom.png" alt="">
@@ -1754,15 +1756,15 @@
   </section>
 
   <!-- CONFIGURATOR -->
+  <h2>Wall Patterns Configurator</h2>
   <section class="configurator">
     <article>
-      <h2>Floor Patterns Configurator</h2>
       <div class="conf-patterns">
         <h3>Pattern</h3>
           <ul>
-            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-diagonals.png" alt="pattern diagonals"></a></li>
-            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-hex.png" alt="pattern hexagons"></a></li>
-            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-circles.png" alt="pattern circles"></a></li>
+            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-circles.png" alt="full pattern"></a></li>
+            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-dots.svg" alt="dots"></a></li>
+            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-blackdots.svg" alt="black dots"></a></li>
           </ul>
       </div>
       <div class="conf-colours">
@@ -1776,13 +1778,17 @@
       <div class="conf-perspective">
         <h3>In Perspective</h3>
           <ul>
-            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-tableplant.png" alt="pattern-cd"></a></li>
-            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn_bathroom.png" alt="thumbnail bathroom"></a></li>
-            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-shoes.png" alt="thumbnail feet"></a></li>
+            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-lamp.svg" alt="full pattern"></a></li>
+            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-tableplant.png" alt="dots"></a></li>
+            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-shoes.png" alt="black dots"></a></li>
           </ul>
       </div>
     </article>
   </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/CSSRulePlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
 
 </body>
 </html>
