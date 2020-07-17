@@ -2674,33 +2674,28 @@
     </section>
   </main>
   <!-- CONFIGURATOR -->
-  <h2>Wall Patterns Configurator</h2>
   <aside class="configurator">
+    <h2>Wall Patterns Configurator</h2>
     <section>
       <article class="conf-patterns">
         <h3>Pattern</h3>
-          <ul>
-            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-full.svg" alt="full pattern"></a></li>
-            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-dots.svg" alt="dots"></a></li>
-            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-blackdots.svg" alt="black dots"></a></li>
-          </ul>
+          <div id="tn-patterns">
+            <button><img id="btn-full" class="tn"/></button>
+            <button><img id="btn-dots-white" class="tn"/></button>
+            <button><img id="btn-dots-black" class="tn"/></button>
+          </div>
       </article>
       <article class="conf-colours">
         <h3>Colour</h3>
-          <ul>
-            <li><a href="default.asp"><div class="grey tn"></div></a></li>
-            <li><a href="default.asp"><div class="yellow tn"></div></a></li>
-            <li><a href="default.asp"><div class="blue tn"></div></a></li>
-          </ul>
+            <button class="grey tn"></button>
+            <button class="yellow tn"></button>
+            <button class="blue tn"></button>
         </article>
       <article class="conf-perspective">
         <h3>In Perspective</h3>
-          <ul>
-            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-lamp.svg" alt="full pattern"></a></li>
-            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-bureau.svg" alt="dots"></a></li>
-            <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-sofa.svg" alt="black dots"></a></li>
-          </ul>
-      </div>
+          <button class="tn" id="btn-lamp"></button>
+          <button class="tn" id="btn-bureau"></button>
+          <button class="tn" id="btn-sofa"></button>
       </article>
   </aside>
   

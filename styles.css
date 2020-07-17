@@ -23,8 +23,8 @@ h2{
   font-size: 15px;
   font-weight: 400;
   position: absolute;
-  top: 2%;
-  right: 2%;
+  top: 4%;
+  right: 4%;
   z-index: 2;
 }
 h3{
@@ -120,41 +120,52 @@ main .blue-bg{
   position: absolute;
   top: 0;
   right: 0;
-  /* margin: 7.5% 3.2%; */
   width: 40%;
-  height: 100vh;
+  height: 105vh;
   background-color: #E2E0E0;
   opacity: 70%;
   z-index: 1;
 }
-ul{
-  list-style: none;
-  display: flex;
-  margin-left: -11%;
-  margin-top: 4%;
-}
-li{
-  display: inline-block;
-  margin: 2%;
-  flex-shrink: 50%;
+button{
+  border-style: none;
+  padding: 0;
+  margin: 5% 5% 0 0;
+  width: 6.8em;
+  height: 6.8em;
 }
 .tn{
-  width: 5em;
-  height: 5em;
   background-color: #E2E0E0;
   box-shadow: 1px 3px 6px #8e8f8eea;
   z-index: 3;
 }
 /* ------Conf Patterns------ */
 .conf-patterns{
-  margin-top: 22%;
-  margin-left: 20%;
+  margin-top: 30%;
+  margin-left: 18%;
   z-index: 2;
+}
+#btn-full{
+  background-image: url(images/thumbnails/tn-full.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+#btn-dots-white{
+  background-image: url(images/thumbnails/tn-dots.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+#btn-dots-black{
+  background-image: url(images/thumbnails/tn-blackdots.svg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 /* ------Conf Colours------- */
 .conf-colours{
   margin-top: 10%;
-  margin-left: 20%;
+  margin-left: 18%;
 }
 .conf-colours .grey{
  background-color: var(--bg-grey);
@@ -168,7 +179,19 @@ li{
 /* ------Conf Perspectives------ */
 .conf-perspective{
   margin-top: 10%;
-  margin-left: 20%;
+  margin-left: 18%;
+}
+#btn-lamp{
+  background-image: url(images/thumbnails/tn-lamp.svg);
+  background-size: cover;
+}
+#btn-bureau{
+  background-image: url(images/thumbnails/tn-bureau.svg);
+  background-size: cover;
+}
+#btn-sofa{
+  background-image: url(images/thumbnails/tn-sofa.svg);
+  background-size: cover;
 }
 
 
