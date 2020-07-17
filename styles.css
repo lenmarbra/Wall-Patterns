@@ -2,29 +2,31 @@
   box-sizing: border-box;
   margin: 0;
 }
-
 :root{
   --main-bg-color: #e8e9e941;
   --main-txt-color: #1a1a1a;
-}
+  --bg-grey: #f5f5f5;
+  --bg-yellow: #DED4C3;
+  --bg-blue: #BBC7CE;
 
+}
 body{
   width: 100vp;
   height: 100vh;
   position: relative;
   overflow: hidden;
   font-family: 'Lucida Std', Arial, Helvetica, sans-serif;
-  background-color: var(--main-bg-color);
+  background-image: url(images/bgfilter.png);
+  background-size: cover;
 }
-
 h2{
   font-size: 15px;
   font-weight: 400;
   position: absolute;
   top: 2%;
   right: 2%;
+  z-index: 2;
 }
-
 h3{
   font-family: 'MatrixExtraBold','Akzidenz-Grotesk BQ', Arial, Helvetica, sans-serif;
   font-size: 24px;
@@ -32,24 +34,16 @@ h3{
 }
 
 /* --------WALL------- */
-.floor{
+main{
   position: absolute;
   top: 0;
   left: 0;
   width: 60%;
-  height: 100vh;
-}
-
-#bg-filter{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 110%;
-  background-image: url(images/bgfilter.png);
-  background-size: cover;
-}
-
+  height: 105vh;
+  box-shadow: 1px 0px 6px #8e8f8eea;
+  z-index: 2;
+} 
+/* ------In Perspective----- */
 .plant{
   position: absolute;
   top: 20%;
@@ -63,6 +57,7 @@ h3{
   left: 14%;
   width: 46%;
   z-index: 2;
+  opacity: 0;
 }
 .sofa{
   position: absolute;
@@ -70,6 +65,7 @@ h3{
   left: 40%;
   width: 60%;
   z-index: 2;
+  opacity: 0;
 }
 .lamp{
   position: absolute;
@@ -78,33 +74,37 @@ h3{
   width: 40%;
   z-index: 2;
 }
-.floor .grey-bg{
-  background-color: #E2E0E0;
+/* ------Bg Colours----- */
+main .grey-bg{
+  background-color: var(--bg-grey);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   opacity: 35%;
+  opacity: 0;
 }
-.floor .yellow-bg{
-  background-color: #DED4C3; 
+main .yellow-bg{
+  background-color: var(--bg-yellow); 
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   opacity: 35%;
+  opacity: 0;
 }
-.floor .blue-bg{
-  background-color: #BBC7CE;
+main .blue-bg{
+  background-color: var(--bg-blue);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   opacity: 35%;
 }
+/* ------Patterns----- */
 #patterns{
   position: absolute;
   top: 0;
@@ -115,58 +115,64 @@ h3{
   opacity: 80%;
 }
 
-
 /* -------CONFIGURATOR-------- */
-
 .configurator{
   position: absolute;
   top: 0;
   right: 0;
-  margin: 10% 4%;
-  width: 30%;
+  /* margin: 7.5% 3.2%; */
+  width: 40%;
   height: 100vh;
+  background-color: #E2E0E0;
+  opacity: 70%;
+  z-index: 1;
 }
-
-.conf-patterns{
-  margin-top: 10%;
-}
-
-.conf-colours{
-  margin-top: 10%;
-}
-.conf-colours .grey{
- background-color: #EFECEC;
-}
-.conf-colours .yellow{
- background-color: #EEE8E2;
-}
-.conf-colours .blue{
- background-color: #E1E4E6;
-}
-
-.conf-perspective{
-  margin-top: 10%;
-}
-
 ul{
   list-style: none;
   display: flex;
   margin-left: -11%;
   margin-top: 4%;
 }
-
 li{
   display: inline-block;
   margin: 2%;
   flex-shrink: 50%;
 }
-
 .tn{
   width: 5em;
   height: 5em;
+  background-color: #E2E0E0;
   box-shadow: 1px 3px 6px #8e8f8eea;
+  z-index: 3;
+}
+/* ------Conf Patterns------ */
+.conf-patterns{
+  margin-top: 22%;
+  margin-left: 20%;
+  z-index: 2;
+}
+/* ------Conf Colours------- */
+.conf-colours{
+  margin-top: 10%;
+  margin-left: 20%;
+}
+.conf-colours .grey{
+ background-color: var(--bg-grey);
+}
+.conf-colours .yellow{
+ background-color: var(--bg-yellow);
+}
+.conf-colours .blue{
+ background-color: var(--bg-blue);
+}
+/* ------Conf Perspectives------ */
+.conf-perspective{
+  margin-top: 10%;
+  margin-left: 20%;
 }
 
+
+/* ------temp-------- */
 /* .double{
   display: none;
 }

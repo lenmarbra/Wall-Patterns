@@ -6,41 +6,18 @@
   <link rel="stylesheet" href="styles.css">
   <title>Wall Patterns Configurator</title>
 </head>
-<body>
+<body id="bg-filter">
   <!-- FLOOR -->
-  <section class="floor">
-    <div id="bg-filter"></div>
-
-    <!-- PERSPECTIVE -->
-    <article id="Perspective">
-      <!-- <article>
-        <img class="lamp" src="images/env/lamp.svg" alt="">
-      </article> -->
-      <article class="env-bureau">
-        <img class="bureau" src="images/env/bureau.svg" alt="">
-      </article>
-      <!-- <article class="env-sofa">
-        <img class="sofa" src="images/env/sofa2.svg" alt="">
-      </article> -->
-    </article>
-
-    <!-- COLOURS -->
-    <article id="colours">
-      <!-- <div class="grey-bg"></div> -->
-      <div class="yellow-bg"></div>
-      <!-- <div class="blue-bg"></div> -->
-    </article>
-
-    <!-- PATTERNS -->
-    <article id="patterns">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1725.283" height="1140.362" viewBox="0 0 1725.283 1140.362">
-          <defs>
+  <main>
+    <section id="patterns">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1725.283" height="1140.362" viewBox="0 0 1725.283 1140.362">
+        <defs>
             <clipPath id="clip-path">
               <rect width="1725.283" height="1140.362" fill="none"/>
             </clipPath>
           </defs>
           <g id="Repeat_Grid_3" data-name="Repeat Grid 3" clip-path="url(#clip-path)">
-            <g id="rowone">
+            <g id="row-one">
               <g id="Group_842" data-name="Group 842" transform="translate(-117.98 -468.18)">
                 <g id="Group_841" data-name="Group 841" transform="translate(118.48 468.68)">
                   <path id="Path_24771" class="double" data-name="Path 24771" d="M180.811,547.7c-.465-.078-.931-.146-1.394-.235a8.187,8.187,0,0,1,.22-16.094c.432-.068.87-.1,1.36-.161a8.185,8.185,0,0,1,3.656-6.757,7.922,7.922,0,0,1,5.592-1.322,8.212,8.212,0,0,1-.944,16.357c-.1.62-.159,1.254-.308,1.866a8.1,8.1,0,0,1-7.38,6.248,1.522,1.522,0,0,0-.321.1Zm14.938-16.432a6.519,6.519,0,1,0-6.539,6.523A6.518,6.518,0,0,0,195.749,531.265Z" transform="translate(-140.13 -490.335)" fill="none" stroke="#1a1a1a" stroke-miterlimit="10" stroke-width="1"/>
@@ -2684,31 +2661,39 @@
             </g>
           </g>
         </svg>
-    </article>
-
-  </section>
-
+    </section>
+    <section id="colours">
+      <div class="grey-bg"></div>
+      <div class="yellow-bg"></div>
+      <div class="blue-bg"></div>
+    </section>
+    <section id="Perspective">
+      <img class="lamp" src="images/env/lamp.svg" alt="">
+      <img class="bureau" src="images/env/bureau.svg" alt="">
+      <img class="sofa" src="images/env/sofa2.svg" alt="">
+    </section>
+  </main>
   <!-- CONFIGURATOR -->
   <h2>Wall Patterns Configurator</h2>
-  <section class="configurator">
-    <article>
-      <div class="conf-patterns">
+  <aside class="configurator">
+    <section>
+      <article class="conf-patterns">
         <h3>Pattern</h3>
           <ul>
             <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-full.svg" alt="full pattern"></a></li>
             <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-dots.svg" alt="dots"></a></li>
             <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-blackdots.svg" alt="black dots"></a></li>
           </ul>
-      </div>
-      <div class="conf-colours">
+      </article>
+      <article class="conf-colours">
         <h3>Colour</h3>
           <ul>
             <li><a href="default.asp"><div class="grey tn"></div></a></li>
             <li><a href="default.asp"><div class="yellow tn"></div></a></li>
             <li><a href="default.asp"><div class="blue tn"></div></a></li>
           </ul>
-      </div>
-      <div class="conf-perspective">
+        </article>
+      <article class="conf-perspective">
         <h3>In Perspective</h3>
           <ul>
             <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-lamp.svg" alt="full pattern"></a></li>
@@ -2716,9 +2701,9 @@
             <li><a href="default.asp"><img class="tn" src="images/thumbnails/tn-sofa.svg" alt="black dots"></a></li>
           </ul>
       </div>
-    </article>
-  </section>
-
+      </article>
+  </aside>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/gsap.min.js"></script> 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.1/CSSRulePlugin.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.3/ScrollTrigger.min.js"></script>
