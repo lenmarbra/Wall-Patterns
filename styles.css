@@ -27,6 +27,16 @@ h2{
   right: 4%;
   z-index: 2;
 }
+@media only screen and (max-width: 600px){
+  h2{
+    font-size: 16px;
+    font-weight: 600;
+    position: fixed;
+    top: 3%;
+    right: 46%;
+    z-index: 2;
+  }
+}
 h3{
   font-family: 'Akzidenz-Grotesk BQ medium', Arial, Helvetica, sans-serif;
   font-size: 20px;
@@ -44,6 +54,15 @@ main{
   overflow: hidden;
   z-index: 2;
 } 
+@media only screen and (max-width: 600px){
+  main{
+    position: fixed;
+    top: 8%;
+    width: 100%;
+    height: 50%;
+    background-color: #f5f5f5;
+  } 
+}
 /* ------In Perspective----- */
 
 #perspbtnBureau{
@@ -117,6 +136,13 @@ main #colorbtnBlue{
   opacity: 70%;
   z-index: 1;
 }
+@media only screen and (max-width: 600px){
+  .configurator{
+    top: 24em;
+    width: 100%;
+    height: auto;
+  }
+}
 button{
   border-style: none;
   padding: 0;
@@ -127,6 +153,15 @@ button{
 }
 button:hover{
   opacity: 70%;
+}
+@media only screen and (max-width: 600px){
+  button{
+    border-style: none;
+    padding: 0;
+    margin: 5% 5% 0 0;
+    width: 5em;
+    height: 5em;
+  }
 }
 .tn{
   background-color: #E2E0E0;
