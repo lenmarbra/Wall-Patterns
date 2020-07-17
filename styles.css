@@ -42,6 +42,11 @@ h3{
   font-size: 20px;
   font-weight: 600;
 }
+@media only screen and (max-width: 600px){
+  h3{
+    display: none;
+  }
+}
 
 /* --------WALL------- */
 main{
@@ -157,10 +162,7 @@ button:hover{
 @media only screen and (max-width: 600px){
   button{
     border-style: none;
-    padding: 0;
-    margin: 5% 5% 0 0;
-    width: 5em;
-    height: 5em;
+    margin: 2.5%;
   }
 }
 .tn{
@@ -173,6 +175,12 @@ button:hover{
   margin-top: 25%;
   margin-left: 16%;
   z-index: 2;
+}
+@media only screen and (max-width: 600px){
+  .conf-patterns{
+    margin-left: 10%;
+    margin-top: 15%;
+  }
 }
 #btnFull{
   background-image: url(images/thumbnails/tn-full.svg);
@@ -191,6 +199,12 @@ button:hover{
   margin-top: 10%;
   margin-left: 16%;
 }
+@media only screen and (max-width: 600px){
+  .conf-colours{
+    margin-top: 5%;
+    margin-left: 10%;
+  }
+}
 .conf-colours .grey{
  background-color: var(--bg-grey);
 }
@@ -205,6 +219,12 @@ button:hover{
   margin-top: 10%;
   margin-left: 16%;
 }
+@media only screen and (max-width: 600px){
+  .conf-perspective{
+    margin-top: 5%;
+    margin-left: 10%;
+  }
+}
 #btnLamp{
   background-image: url(images/thumbnails/tn-lamp.svg);
   background-size: cover;
@@ -218,12 +238,3 @@ button:hover{
   background-size: cover;
 }
 
-
-/* ------temp-------- */
-/* .double{
-  display: none;
-}
-
-.double-2nd{
-  display: none;
-} */
