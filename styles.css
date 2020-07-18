@@ -148,25 +148,40 @@ main #colorbtnBlue{
   opacity: 0;
   z-index: 3;
 }
-.mobile{
-  display: none;
-}
 /* @media only screen and (max-width: 600px){
-#fullpattern-mob{
-  background-image: url(images/svg-patterns/mobile_full.svg);
-  background-size: cover;
-}
-.desktop{
-  display: none;
-}
-}
-@media only screen and (max-width: 380px){
+  .mobile{ */
+  
+    /* #fullpattern-mob{
+    background-image: url(images/svg-patterns/mobile_full.svg);
+    background-size: cover;
+  }
+  #dots-mob{
+    background-image: url(images/svg-patterns/mobile_dots.svg);
+    background-size: cover;
+  }  
+  #blackdots-mob{
+    background-image: url(images/svg-patterns/mobile_dots_black.svg);
+    background-size: cover;
+  }  */
+/* } */
+/* @media only screen and (max-width: 380px){
   #fullpattern-mob{
     background-image: url(images/svg-patterns/mobile_full.svg);
     background-size: cover;
   }  
+  #dots-mob{
+    background-image: url(images/svg-patterns/mobile_dots.svg);
+    background-size: cover;
+  }  
+  #blackdots-mob{
+    background-image: url(images/svg-patterns/mobile_dots_black.svg);
+    background-size: cover;
+  }
   .desktop{
     display: none;
+  }
+  .mobile{
+    display: inline-block;
   }
 } */
 /* -------CONFIGURATOR-------- */

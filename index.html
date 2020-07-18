@@ -10,8 +10,8 @@
   <!-- WALL -->
   <main>
     <section id="patterns" >
-      <div class="patternbtnFull pattern">
-        <svg class="desktop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1725.283" height="1140.362" viewBox="0 0 1725.283 1140.362"> 
+      <div class="patternbtnFull pattern desktop">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1725.283" height="1140.362" viewBox="0 0 1725.283 1140.362"> 
             <g data-name="Repeat Grid 3" clip-path="url(#clip-path)">
               <g id="row-one">
                 <g id="Group_842" data-name="Group 842" transform="translate(-117.98 -468.18)">
@@ -2658,8 +2658,8 @@
             </g>
         </svg>
       </div>
-      <div class="patternbtnCircles pattern">
-        <svg class="desktop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1725.28" height="1140.36" viewBox="0 0 1725.28 1140.36">
+      <div class="patternbtnCircles pattern desktop">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1725.28" height="1140.36" viewBox="0 0 1725.28 1140.36">
           <defs>
             <clipPath id="clip-path">
               <rect width="1725.28" height="1140.36" fill="none"/>
@@ -4541,8 +4541,8 @@
           </g>
         </svg>
       </div>
-      <div class="patternbtnHexagon pattern">
-        <svg class="desktop" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1725.28" height="1140.36" viewBox="0 0 1725.28 1140.36">
+      <div class="patternbtnHexagon pattern desktop">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1725.28" height="1140.36" viewBox="0 0 1725.28 1140.36">
           <g id="Repeat_Grid_4" data-name="Repeat Grid 4" clip-path="url(#clip-path)">
             <g transform="translate(-25.347 -20.181)">
               <path id="Path_24850" data-name="Path 24850" d="M202.276,532.388a6.519,6.519,0,1,1-13.037-.133,6.519,6.519,0,0,1,13.037.133Z" transform="translate(-130.658 -472.457)" fill="#1a1a1a" stroke="#1a1a1a" stroke-miterlimit="10" stroke-width="1"/>
@@ -6419,11 +6419,11 @@
           </g>
         </svg>   
       </div>
-      <!-- <article class="mobile">
-        <div id="fullpattern-mob patternbtnFull pattern"></div>
-        <div id="dots-mob patternbtnCircles pattern"></div>
-        <div id="blackdots-mob patternbtnHexagon pattern"></div>
-      </article>   -->
+      <article class="mobile">
+        <img id="fullpattern-mob" class="patternmobbtnFull pattern" src="images/svg-patterns/mobile_full.svg" alt="full pattern">
+        <img id="dots-mob" class="patternmobbtnCircles pattern" src="images/svg-patterns/mobile_dots.svg" alt="dots">
+        <img id="blackdots-mob"class="patternmobbtnHexagon pattern" src="images/svg-patterns/mobile_dots_black.svg" alt=" black dots">
+      </article>  
     </section>
     
     <section id="colours">
@@ -6472,16 +6472,33 @@
   <script>
     //JS - PATTERNS
     //Selects a button and attaches the event listener to it
-    document.getElementById('btnFull').addEventListener('click', changePattern);
-    document.getElementById('btnCircles').addEventListener('click', changePattern);
-    document.getElementById('btnHexagon').addEventListener('click', changePattern);
-    //function that gets triggered on click, the argument is the event
-    function changePattern(event){
-      let elementToShow = '.pattern' + event.target.id;
-      console.log(event.target.id);
-      //drilling inside the event to get the button id
-      gsap.to('.pattern', {opacity:0, duration: .5});
-      gsap.to(elementToShow, {opacity: 1, duration: .5, delay: .5});
+    var mql = window.matchMedia('(min-width: 601px)');
+    if(mql.matches){
+      document.getElementById('btnFull').addEventListener('click', changePattern);
+      document.getElementById('btnCircles').addEventListener('click', changePattern);
+      document.getElementById('btnHexagon').addEventListener('click', changePattern);
+      //function that gets triggered on click, the argument is the event
+      function changePattern(event){
+        let elementToShow = '.pattern' + event.target.id;
+        console.log(event.target.id);
+        //drilling inside the event to get the button id
+        gsap.to('.pattern', {opacity:0, duration: .5});
+        gsap.to(elementToShow, {opacity: 1, duration: .5, delay: .5});
+      }
+    }
+    var mql = window.matchMedia('(max-width: 600px)');
+    if(mql.matches){
+      document.getElementById('btnFull').addEventListener('click', changePattern);
+      document.getElementById('btnCircles').addEventListener('click', changePattern);
+      document.getElementById('btnHexagon').addEventListener('click', changePattern);
+      
+      function changePattern(event){
+        let elementToShow = '.patternmob' + event.target.id;
+        console.log(event.target.id);
+        //drilling inside the event to get the button id
+        gsap.to('.pattern', {opacity:0, duration: .5});
+        gsap.to(elementToShow, {opacity: 1, duration: .5, delay: .5});
+      }
     }
 
     //JS - COLOURS
