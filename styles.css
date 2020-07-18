@@ -42,10 +42,19 @@ h3{
   font-size: 20px;
   font-weight: 600;
 }
+h3 span{
+  display: none;
+}
+
 @media only screen and (max-width: 600px){
-  h3{
-    display: none;
+h3{
+  font-size: 16px;
+  font-weight: 600;
+  margin: 7px 0 3px;
   }
+h3 span{
+  display: inline-block;
+}
 }
 
 /* --------WALL------- */
@@ -54,7 +63,7 @@ main{
   top: 0;
   left: 0;
   width: 60%;
-  height: 105vh;
+  height: 100vh;
   box-shadow: 1px 0px 6px #8e8f8eea;
   overflow: hidden;
   z-index: 2;
@@ -136,22 +145,23 @@ main #colorbtnBlue{
   top: 0;
   right: 0;
   width: 40%;
-  height: 105vh;
+  height: 100vh;
   background-color: #E2E0E0;
   opacity: 70%;
   z-index: 1;
 }
 @media only screen and (max-width: 600px){
   .configurator{
-    top: 24em;
+    top: 25em;
     width: 100%;
-    height: auto;
+    height: 80vh;
+    background-color: transparent;
   }
 }
 button{
   border-style: none;
   padding: 0;
-  margin: 5% 5% 0 0;
+  margin: 3% 5% 0 0;
   width: 6.8em;
   height: 6.8em;
   cursor:sw-resize;
@@ -162,7 +172,9 @@ button:hover{
 @media only screen and (max-width: 600px){
   button{
     border-style: none;
-    margin: 2.5%;
+    margin: 1% 1% 0 0;
+    width: 9.3em;
+    height: 8em;  
   }
 }
 .tn{
@@ -172,14 +184,13 @@ button:hover{
 }
 /* ------Conf Patterns------ */
 .conf-patterns{
-  margin-top: 25%;
-  margin-left: 16%;
+  margin-top: 22%;
+  margin-left: 18%;
   z-index: 2;
 }
 @media only screen and (max-width: 600px){
   .conf-patterns{
-    margin-left: 10%;
-    margin-top: 15%;
+    margin: 13% 2% 0% 3%;
   }
 }
 #btnFull{
@@ -196,13 +207,14 @@ button:hover{
 }
 /* ------Conf Colours------- */
 .conf-colours{
-  margin-top: 10%;
-  margin-left: 16%;
+  margin-top: 8%;
+  margin-left: 18%;
 }
 @media only screen and (max-width: 600px){
   .conf-colours{
-    margin-top: 5%;
-    margin-left: 10%;
+    margin-top: 0%;
+    margin: 0 2% 0% 3%;
+
   }
 }
 .conf-colours .grey{
@@ -216,13 +228,12 @@ button:hover{
 }
 /* ------Conf Perspectives------ */
 .conf-perspective{
-  margin-top: 10%;
-  margin-left: 16%;
+  margin-top: 8%;
+  margin-left: 18%;
 }
 @media only screen and (max-width: 600px){
   .conf-perspective{
-    margin-top: 5%;
-    margin-left: 10%;
+    margin: 0 2% 0% 3%;
   }
 }
 #btnLamp{
@@ -237,4 +248,16 @@ button:hover{
   background-image: url(images/thumbnails/tn-sofa.svg);
   background-size: cover;
 }
+/* ------Finish------ */
 
+#finish{
+  margin-left: 26%;
+  margin-top: 10%;
+}
+#finish .finish{
+  width: 8em;
+  height: 3.5em;
+  background-color: var(--main-txt-color);
+  color: var(--bg-grey);
+  box-shadow: 1px 0px 6px #8e8f8eea;
+}
