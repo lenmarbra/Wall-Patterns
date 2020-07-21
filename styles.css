@@ -20,12 +20,14 @@ body{
   background-size: cover;
 }
 h2{
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 550;
   position: absolute;
   top: 2%;
   right: 4%;
   z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
 @media only screen and (max-width: 600px){
   h2{
@@ -33,7 +35,7 @@ h2{
     font-weight: 600;
     position: fixed;
     top: 3%;
-    right: 46%;
+    right: 9%;
     z-index: 2;
   }
 }
@@ -50,7 +52,8 @@ h2{
 h3{
   font-family: 'Akzidenz-Grotesk BQ medium', Arial, Helvetica, sans-serif;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 550;
+  letter-spacing: 0.5px;
 }
 h3 span{
   display: none;
@@ -148,42 +151,6 @@ main #colorbtnBlue{
   opacity: 0;
   z-index: 3;
 }
-/* @media only screen and (max-width: 600px){
-  .mobile{ */
-  
-    /* #fullpattern-mob{
-    background-image: url(images/svg-patterns/mobile_full.svg);
-    background-size: cover;
-  }
-  #dots-mob{
-    background-image: url(images/svg-patterns/mobile_dots.svg);
-    background-size: cover;
-  }  
-  #blackdots-mob{
-    background-image: url(images/svg-patterns/mobile_dots_black.svg);
-    background-size: cover;
-  }  */
-/* } */
-/* @media only screen and (max-width: 380px){
-  #fullpattern-mob{
-    background-image: url(images/svg-patterns/mobile_full.svg);
-    background-size: cover;
-  }  
-  #dots-mob{
-    background-image: url(images/svg-patterns/mobile_dots.svg);
-    background-size: cover;
-  }  
-  #blackdots-mob{
-    background-image: url(images/svg-patterns/mobile_dots_black.svg);
-    background-size: cover;
-  }
-  .desktop{
-    display: none;
-  }
-  .mobile{
-    display: inline-block;
-  }
-} */
 /* -------CONFIGURATOR-------- */
 .configurator{
   position: absolute;
@@ -262,7 +229,7 @@ button:hover{
   background-image: url(images/thumbnails/tn-dots.svg);
   background-size: cover;
 }
-#btnHexagon{
+#btnBlackDot{
   background-image: url(images/thumbnails/tn-blackdots.svg);
   background-size: cover;
 }
