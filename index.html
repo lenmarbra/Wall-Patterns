@@ -6474,6 +6474,8 @@
     document.getElementById('btnCircles').addEventListener('click', changePattern);
     document.getElementById('btnBlackDot').addEventListener('click', changePattern);
 
+    let lastButtonClicked;
+
     function changePattern(event){
       let elementToShow = '.pattern' + event.target.id;
 
@@ -6488,7 +6490,15 @@
       tl.fromTo('.circle', {scale: 1}, {scale: 1.7, border: 10, duration: 1.7}, 1);
       tl.fromTo('.large-circle', {scale: 1}, {scale: 5, border: 10, duration: 1.7}, 2);
       tl.fromTo('.rotategroup', {scale: 1}, {scale: 3, duration: 1.7}, 1);
+
+      //add 'active' class to the button clicked
+      event.target.classList.add('active');
+      if (lastButtonClicked){
+      lastButtonClicked.classlist.remove('active');
+      }
+      lastButtonClicked = event.target;
     }
+ 
 
     //JS - COLOURS
     document.getElementById('btnGrey').addEventListener('click', changeColor);

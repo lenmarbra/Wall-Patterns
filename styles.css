@@ -196,9 +196,13 @@ button{
 button:hover{
   opacity: 70%;
 }
-/* button.active{
-  border: 2px solid rgb(168, 166, 166);
-} */
+button:focus {
+  outline:0;
+}
+button.active{
+  border: grey;
+}
+  
 @media only screen and (max-width: 600px){
   button{
     border-style: none;
