@@ -198,6 +198,7 @@ button:hover{
 }
 button:focus {
   outline:0;
+  border: 4px solid rgba(212, 210, 210, 0.568);
 }
 button .active{
   border: 2px solid grey;
@@ -280,14 +281,17 @@ button .active{
 #btnLamp{
   background-image: url(images/thumbnails/tn-lamp.svg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 #btnBureau{
   background-image: url(images/thumbnails/tn-bureau.svg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 #btnSofa{
   background-image: url(images/thumbnails/tn-sofa.svg);
   background-size: cover;
+  background-repeat: no-repeat;
 }
 /* ------Finish buttons------ */
 
