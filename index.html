@@ -9,6 +9,7 @@
 <body id="bg-filter">
   <!-- WALL -->
   <main>
+  <!-- Patterns -->
     <section id="patterns" >
     <!-- Full pattern -->
       <div class="patternbtnFull pattern desktop">
@@ -6422,43 +6423,41 @@
           </g>
         </svg>   
       </div>
-      <article class="mobile">
-        <img id="fullpattern-mob" class="patternmobbtnFull pattern" src="images/svg-patterns/mobile_full.svg" alt="full pattern">
-        <img id="dots-mob" class="patternmobbtnCircles pattern" src="images/svg-patterns/mobile_dots.svg" alt="dots">
-        <img id="blackdots-mob"class="patternmobbtnBlackDot pattern" src="images/svg-patterns/mobile_dots_black.svg" alt=" black dots">
-      </article>  
+  <!-- Colours -->
     </section> 
     <section id="colours">
       <div id="colorbtnGrey" class="color"></div>
       <div id="colorbtnYellow" class="color"></div>
       <div id="colorbtnBlue" class="color"></div>
     </section>
+  <!-- Perspective -->
     <section id="Perspective">
       <img id="perspbtnLamp" class="persp" src="images/env/lamp.svg" alt="">
       <img id="perspbtnBureau" class="persp" src="images/env/bureau.svg" alt="">
       <img id="perspbtnSofa" class="persp" src="images/env/sofa2.svg" alt="">
     </section>
   </main>
+
   <!-- CONFIGURATOR -->
   <aside class="configurator">
     <h2>Wall Patterns Configurator</h2>
       <section class="conf-patterns">
         <h3><span>Choose</span> Pattern</h3>
-        <button id="btnFull" class="tn"></button>
-        <button id="btnCircles" class="tn"></button>
-        <button id="btnBlackDot" class="tn"></button>
+        <button id="btnFull" class="tn active"></button>
+        <button id="btnCircles" class="tn active"></button>
+        <button id="btnBlackDot" class="tn active"></button>
       </section>
       <section class="conf-colours">
         <h3><span>Choose</span> Colour</h3>
-        <button id="btnGrey" class="grey tn"></button>
-        <button id="btnYellow" class="yellow tn"></button>
-        <button id="btnBlue" class="blue tn"></button>
+        <button id="btnGrey" class="grey tn active"></button>
+        <button id="btnYellow" class="yellow tn active"></button>
+        <button id="btnBlue" class="blue tn active"></button>
         </section>
       <section class="conf-perspective">
         <h3><span>View</span> In Perspective</h3>
-        <button class="tn" id="btnLamp"></button>
-        <button class="tn" id="btnBureau"></button>
-        <button class="tn" id="btnSofa"></button>
+        <button id="btnLamp" class="tn active"></button>
+        <button id="btnBureau" class="tn active"></button>
+        <button id="btnSofa" class="tn active"></button>
       </section>
       <section id="finish">
         <button class="finish">Save</button>
@@ -6471,24 +6470,24 @@
   
   <script>
     //JS - PATTERNS
-      document.getElementById('btnFull').addEventListener('click', changePattern);
-      document.getElementById('btnCircles').addEventListener('click', changePattern);
-      document.getElementById('btnBlackDot').addEventListener('click', changePattern);
+    document.getElementById('btnFull').addEventListener('click', changePattern);
+    document.getElementById('btnCircles').addEventListener('click', changePattern);
+    document.getElementById('btnBlackDot').addEventListener('click', changePattern);
 
-      function changePattern(event){
-        let elementToShow = '.pattern' + event.target.id;
+    function changePattern(event){
+      let elementToShow = '.pattern' + event.target.id;
 
-        console.log(event.target.id);
+      console.log(event.target.id);
 
-        var tl = gsap.timeline();
-        tl.to('.pattern', {opacity:0, duration: .1});
-        tl.to(elementToShow, {opacity: 0.7, duration: .5}, .5);
-        tl.to('.patternbtnFull', {y: -50, x: -50, scale: 1.2, strokeWidth: .5, duration: 1, ease: "ease"});
-        tl.to('.patternbtnBlackDot', {y: -8, x: -8, duration: 1.7, ease:"ease"}, 1);
-        tl.to('.rotategroup', {rotation:90, transformOrigin:"50% 50%", duration: 1}, 0.8);
-        tl.fromTo('.circle', {scale: 1}, {scale: 1.7, border: 10, duration: 1.7}, 1);
-        tl.fromTo('.large-circle', {scale: 1}, {scale: 5, border: 10, duration: 1.7}, 2);
-        tl.fromTo('.rotategroup', {scale: 1}, {scale: 3, duration: 1.7}, 1);
+      var tl = gsap.timeline();
+      tl.to('.pattern', {opacity:0, duration: .1});
+      tl.to(elementToShow, {opacity: 0.7, duration: .5}, .5);
+      tl.to('.patternbtnFull', {y: -50, x: -50, scale: 1.2, strokeWidth: .5, duration: 1, ease: "ease"});
+      tl.to('.patternbtnBlackDot', {y: -8, x: -8, duration: 1.7, ease:"ease"}, 1);
+      tl.to('.rotategroup', {rotation:90, transformOrigin:"50% 50%", duration: 1}, 0.8);
+      tl.fromTo('.circle', {scale: 1}, {scale: 1.7, border: 10, duration: 1.7}, 1);
+      tl.fromTo('.large-circle', {scale: 1}, {scale: 5, border: 10, duration: 1.7}, 2);
+      tl.fromTo('.rotategroup', {scale: 1}, {scale: 3, duration: 1.7}, 1);
     }
 
     //JS - COLOURS
@@ -6498,11 +6497,13 @@
 
     function changeColor(event){
       let elementToShow = '#color' + event.target.id;
+
       console.log(event.target.id);
 
       gsap.to('.color', {opacity: 0, duration: .2})
       gsap.to(elementToShow, {opacity: 0.6, duration: .3, delay: .3});
     }
+
     //JS - PERSPECTIVES
     document.getElementById('btnLamp').addEventListener('click', changePerspective);
     document.getElementById('btnBureau').addEventListener('click', changePerspective);
@@ -6510,18 +6511,17 @@
 
     function changePerspective(event){
       let elementToShow = '#persp' + event.target.id;
+
       console.log(event.target.id);
 
       var tl = gsap.timeline();
       tl.to('.persp', {opacity: 0, duration: .2});
       var mql = window.matchMedia('(min-width: 601px)');
       if(mql.matches){
-        tl.to(elementToShow, {opacity: 1, duration: .3, delay: .3});
-      }
+        tl.to(elementToShow, {opacity: 1, duration: .3, delay: .3});}
       var mql = window.matchMedia('(max-width: 600px)');
       if(mql.matches){
-        tl.to(elementToShow, {opacity: 1, duration: .3, scale: 1.2, delay: .3});
-      }
+        tl.to(elementToShow, {opacity: 1, duration: .3, scale: 1.2, delay: .3});}
       tl.from('.persp', {rotation: 7, ease: "back"});
     }
 

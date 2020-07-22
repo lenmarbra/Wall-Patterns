@@ -51,7 +51,8 @@ h2{
     font-weight: 600;
     position: fixed;
     top: 2.5%;
-    right: 43%;
+    right: auto;
+    left: 4.5%;
     z-index: 2;
   }
 }
@@ -195,6 +196,9 @@ button{
 button:hover{
   opacity: 70%;
 }
+/* button.active{
+  border: 2px solid rgb(168, 166, 166);
+} */
 @media only screen and (max-width: 600px){
   button{
     border-style: none;
@@ -281,7 +285,7 @@ button:hover{
   background-image: url(images/thumbnails/tn-sofa.svg);
   background-size: cover;
 }
-/* ------Finish------ */
+/* ------Finish buttons------ */
 
 #finish{
   margin-left: 26%;
