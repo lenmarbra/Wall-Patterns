@@ -6471,47 +6471,24 @@
   
   <script>
     //JS - PATTERNS
-    var mql = window.matchMedia('(min-width: 601px)');
-    if(mql.matches){
-    //Selects a button and attaches the event listener to it
       document.getElementById('btnFull').addEventListener('click', changePattern);
       document.getElementById('btnCircles').addEventListener('click', changePattern);
       document.getElementById('btnBlackDot').addEventListener('click', changePattern);
-      //function that gets triggered on click, the argument is the event
+
       function changePattern(event){
         let elementToShow = '.pattern' + event.target.id;
-        //drilling inside the event to get the button id
+
         console.log(event.target.id);
-        //appearance
+
         var tl = gsap.timeline();
         tl.to('.pattern', {opacity:0, duration: .1});
         tl.to(elementToShow, {opacity: 0.7, duration: .5}, .5);
         tl.to('.patternbtnFull', {y: -50, x: -50, scale: 1.2, strokeWidth: .5, duration: 1, ease: "ease"});
         tl.to('.patternbtnBlackDot', {y: -8, x: -8, duration: 1.7, ease:"ease"}, 1);
         tl.to('.rotategroup', {rotation:90, transformOrigin:"50% 50%", duration: 1}, 0.8);
-        // tl.fromTo('.rotategroup', {rotatation: 0, transformOrigin:"50% 50%"}, {rotation:90, transformOrigin:"50% 50%", duration: 1}, 1);
         tl.fromTo('.circle', {scale: 1}, {scale: 1.7, border: 10, duration: 1.7}, 1);
-        tl.fromTo('.large-circle', {scale: 1}, {scale: 5, border: 10, duration: 1.7}, 1);
+        tl.fromTo('.large-circle', {scale: 1}, {scale: 5, border: 10, duration: 1.7}, 2);
         tl.fromTo('.rotategroup', {scale: 1}, {scale: 3, duration: 1.7}, 1);
-
-        // tl.staggerTo(".pattern", 1, {opacity:1, ease:Bounce.easeOut}, 1);
-        // tl.from(".line", {y: -8, rotation: -15, x: 40, duration: 1.5, ease: "back"});
-
-      }
-    }
-    var mql = window.matchMedia('(max-width: 600px)');
-    if(mql.matches){
-      document.getElementById('btnFull').addEventListener('click', changePattern);
-      document.getElementById('btnCircles').addEventListener('click', changePattern);
-      document.getElementById('btnBlackDot').addEventListener('click', changePattern);
-      
-      function changePattern(event){
-        let elementToShow = '.patternmob' + event.target.id;
-        console.log(event.target.id);
-
-        gsap.to('.pattern', {opacity:0, duration: .2});
-        gsap.to(elementToShow, {opacity: 1, duration: .5, delay: .5});
-      }
     }
 
     //JS - COLOURS
@@ -6534,9 +6511,20 @@
     function changePerspective(event){
       let elementToShow = '#persp' + event.target.id;
       console.log(event.target.id);
-      gsap.to('.persp', {opacity: 0, duration: .2});
-      gsap.to(elementToShow, {opacity: 1, duration: .3, delay: .3});
+
+      var tl = gsap.timeline();
+      tl.to('.persp', {opacity: 0, duration: .2});
+      var mql = window.matchMedia('(min-width: 601px)');
+      if(mql.matches){
+        tl.to(elementToShow, {opacity: 1, duration: .3, delay: .3});
+      }
+      var mql = window.matchMedia('(max-width: 600px)');
+      if(mql.matches){
+        tl.to(elementToShow, {opacity: 1, duration: .3, scale: 1.2, delay: .3});
+      }
+      tl.from('.persp', {rotation: 7, ease: "back"});
     }
+
   </script>
 </body>
 </html>
