@@ -191,7 +191,7 @@ button{
   margin: 3% 5% 0 0;
   width: 6.8em;
   height: 6.8em;
-  cursor:sw-resize;
+  cursor: URL(images/pointer.svg), auto;
 }
 button:hover{
   opacity: 70%;
@@ -224,6 +224,7 @@ button .active{
   background-color: #E2E0E0;
   box-shadow: 1px 3px 6px #8e8f8eea;
   z-index: 3;
+  cursor: URL(images/pointer.svg);
 }
 /* ------Conf Patterns------ */
 .conf-patterns{
