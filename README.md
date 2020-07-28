@@ -1,4 +1,4 @@
-# floorpatterns
+# Wall Patterns
 
 
 
